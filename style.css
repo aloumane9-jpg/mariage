@@ -1,0 +1,509 @@
+/* style.css */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Montserrat',sans-serif;
+  background:#f8f7f2;
+  color:#1d3b2f;
+}
+
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.35),
+  rgba(0,0,0,0.35)),
+  url('./salma123.jpeg');
+
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:20px;
+}
+
+.hero-content{
+  animation:fade 2s ease;
+}
+
+.mini-title{
+  letter-spacing:4px;
+  margin-bottom:20px;
+  font-size:14px;
+}
+
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:80px;
+  font-weight:300;
+}
+
+.hero h1 span{
+  font-size:45px;
+}
+
+.date{
+  margin-top:20px;
+  letter-spacing:3px;
+}
+
+.location{
+  margin-top:15px;
+  font-size:18px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:40px;
+  padding:14px 35px;
+  border:1px solid white;
+  color:white;
+  text-decoration:none;
+  border-radius:40px;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:white;
+  color:#1d3b2f;
+}
+
+.countdown-section{
+  padding:90px 20px;
+  text-align:center;
+}
+
+.countdown-section h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:50px;
+  margin-bottom:50px;
+}
+
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.box{
+  background:white;
+  width:140px;
+  height:140px;
+  border-radius:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.box span{
+  font-size:42px;
+  font-family:'Cormorant Garamond',serif;
+}
+
+.box p{
+  margin-top:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-size:12px;
+}
+
+.infos{
+  padding:80px 20px;
+  display:flex;
+  gap:30px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:white;
+  width:340px;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card h3{
+  margin-bottom:25px;
+  font-size:25px;
+  font-family:'Cormorant Garamond',serif;
+}
+
+.card p{
+  margin-bottom:15px;
+  line-height:1.7;
+}
+
+.bold{
+  font-weight:bold;
+}
+
+.map-btn{
+  display:inline-block;
+  margin-top:20px;
+  background:#29513f;
+  color:white;
+  padding:14px 25px;
+  border-radius:10px;
+  text-decoration:none;
+}
+
+.gallery{
+  padding:90px 20px;
+  text-align:center;
+}
+
+.gallery h2{
+  font-size:50px;
+  margin-bottom:50px;
+  font-family:'Cormorant Garamond',serif;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+footer{
+  background:#183126;
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+}
+
+footer h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:45px;
+  margin-bottom:10px;
+}
+
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* FLEURS / FEUILLES QUI BOUGENT */
+
+.flowers{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.flowers span{
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: rgba(15, 71, 36, 0.18);
+    border-radius: 0 100% 0 100%;
+    animation: animateFlowers linear infinite;
+    bottom: -150px;
+}
+
+.flowers span:nth-child(1){ left:20%; animation-duration:12s; width:18px; height:18px; }
+.flowers span:nth-child(2){ left:20%; animation-duration:18s; animation-delay:5s; }
+.flowers span:nth-child(3){ left:35%; animation-duration:15s; width:30px; height:30px; }
+.flowers span:nth-child(4){ left:50%; animation-duration:20s; }
+.flowers span:nth-child(5){ left:65%; animation-duration:14s; animation-delay:1s; }
+.flowers span:nth-child(6){ left:80%; animation-duration:17s; width:20px; height:20px; }
+.flowers span:nth-child(7){ left:90%; animation-duration:13s; }
+
+@keyframes animateFlowers{
+    0%{ transform:translateY(0) rotate(0deg); opacity:0; }
+    10%{ opacity:1; }
+    100%{ transform:translateY(-1200px) rotate(360deg); opacity:0; }
+}
+
+/* =========================
+   OPENING SCREEN
+========================= */
+
+.opening-screen{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  overflow: hidden;
+  /* FIX: perspective ici pour que rotateX du flap fonctionne bien */
+  perspective: 1200px;
+}
+
+/* Lumière centrale douce */
+.opening-screen::before{
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  background: radial-gradient(circle, rgba(255,255,255,0.45), transparent 70%);
+  filter:blur(40px);
+  pointer-events:none;
+}
+
+/* WRAPPER centré */
+.envelope-wrapper{
+  text-align: center;
+  position: relative;
+  /* FIX: max-width + padding pour éviter le débordement sur mobile */
+  width: 100%;
+  max-width: 560px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ENVELOPPE */
+.envelope{
+  position: relative;
+  /* FIX: largeur fluide avec une valeur max, jamais plus large que l'écran */
+  width: min(520px, 90vw);
+  height: min(340px, 58.8vw);   /* garde le ratio 520/340 ≈ 1.53 */
+  margin: auto;
+}
+
+/* base (fond) */
+.envelope-bottom{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #efe6d7;
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* flap du haut */
+.envelope-top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f4ecdf;
+  clip-path: polygon(0 0, 100% 0, 50% 58%);
+  transform-origin: top center;
+  transition: 1.2s ease;
+  z-index: 5;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* SCEAU */
+.seal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* FIX: taille fluide en vw avec minimum fixe */
+  width: min(120px, 22vw);
+  height: min(120px, 22vw);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 20;
+  /* FIX: transition uniquement sur opacity, pas sur transform 
+     pour éviter le conflit avec le translate sur mobile */
+  transition: opacity 0.4s;
+}
+
+/* FIX: hover uniquement sur les vrais pointeurs (pas tactile) */
+@media (hover: hover) {
+  .seal:hover{
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+.seal img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));
+}
+
+/* texte sous l'enveloppe */
+.open-text{
+  margin-top: 30px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(16px, 4vw, 30px);   /* FIX: taille fluide */
+  letter-spacing: 2px;
+  color: #8c7558;
+  padding: 0 10px;
+}
+
+/* --- États d'ouverture --- */
+
+.opening-screen.open .envelope-top{
+  transform: rotateX(180deg);
+}
+
+.opening-screen.open .seal{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.opening-screen.hide{
+  opacity: 0;
+  pointer-events: none;
+  transition: 1s;
+}
+
+/* RSVP */
+.rsvp-section{
+    padding: 100px 20px;
+    text-align: center;
+    background: #f8f5ef;
+}
+
+.rsvp-section h2{
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.rsvp-section p{
+    margin-bottom: 40px;
+    color: #777;
+}
+
+.rsvp-form{
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea{
+    width: 100%;
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.rsvp-form button{
+    padding: 18px;
+    border: none;
+    background: #1f3d2f;
+    color: white;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* POPUP CONFIRMATION */
+.success-popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+  z-index: 999999;
+}
+
+.success-popup.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-content{
+  background: #fffaf4;
+  padding: 45px 60px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  animation: popupAnim 0.5s ease;
+}
+
+.popup-content h3{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  color: #8c6b4d;
+  margin-bottom: 15px;
+}
+
+.popup-content p{
+  color: #6e5a46;
+  font-size: 18px;
+}
+
+@keyframes popupAnim{
+  from{ transform:scale(0.8); opacity:0; }
+  to{ transform:scale(1); opacity:1; }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px){
+
+  /* Hero */
+  .hero h1{ font-size:52px; line-height:1.1; }
+  .hero h1 span{ font-size:34px; }
+  .mini-title{ font-size:11px; letter-spacing:2px; }
+  .location, .date p{ font-size:15px; }
+
+  /* Countdown */
+  .box{ width:90px; height:90px; }
+  .box span{ font-size:28px; }
+
+  /* Gallery */
+  .countdown-section h2,
+  .gallery h2{ font-size:35px; }
+
+  /* RSVP popup */
+  .popup-content{ padding:35px 25px; }
+  .popup-content h3{ font-size:32px; }
+}
+
+@media (max-width: 480px){
+  /* Enveloppe encore plus petite sur très petit écran */
+  .envelope{
+    width: 88vw;
+    height: calc(88vw / 1.53);
+  }
+}

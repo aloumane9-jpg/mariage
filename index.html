@@ -1,0 +1,149 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chaymae & Oussama</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- POPUP CONFIRMATION -->
+  <div class="success-popup" id="successPopup">
+    <div class="popup-content">
+      <h3>Merci 💍</h3>
+      <p>Merci d'avoir rempli ce formulaire ✨</p>
+    </div>
+  </div>
+
+  <!-- MUSIQUE -->
+  <audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    document.addEventListener("click", function () {
+      document.getElementById("music").play();
+    }, { once: true });
+  </script>
+
+  <!-- ========== OPENING ENVELOPPE ========== -->
+  <div class="opening-screen" id="openingScreen">
+
+    <div class="envelope-wrapper">
+
+      <div class="envelope">
+        <!-- FLAP DU HAUT -->
+        <div class="envelope-top"></div>
+        <!-- BASE -->
+        <div class="envelope-bottom"></div>
+        <!-- SCEAU (cliquer ici pour ouvrir) -->
+        <div class="seal" id="openEnvelope">
+          <img src="ser-removebg-preview.png" alt="Sceau">
+        </div>
+      </div>
+
+      <p class="open-text">Cliquez sur le sceau pour ouvrir</p>
+
+    </div>
+
+  </div>
+
+  <!-- FLEURS ANIMÉES -->
+  <div class="flowers">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="mini-title">VOUS ÊTES INVITÉS AU MARIAGE DE</p>
+      <h1>Chaymae <span>&</span> Oussama</h1>
+      <div class="date">
+        <p>17 OCTOBRE 2026 • 17H</p>
+      </div>
+      <p class="location">Prestige Palace • Bouskoura</p>
+      <a href="#infos" class="btn">Découvrir</a>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown-section">
+    <h2>Le grand jour approche</h2>
+    <div class="countdown">
+      <div class="box"><span id="days">00</span><p>Jours</p></div>
+      <div class="box"><span id="hours">00</span><p>Heures</p></div>
+      <div class="box"><span id="minutes">00</span><p>Minutes</p></div>
+      <div class="box"><span id="seconds">00</span><p>Secondes</p></div>
+    </div>
+  </section>
+
+  <!-- INFOS -->
+  <section class="infos" id="infos">
+    <div class="card">
+      <h3>📍 Adresse</h3>
+      <p class="bold">Prestige Palace</p>
+      <p>Bouskoura, Casablanca</p>
+      <a class="map-btn"
+        href="https://maps.google.com/?q=Prestige+Palace+Bouskoura"
+        target="_blank">
+        Ouvrir dans Google Maps
+      </a>
+    </div>
+    <div class="card">
+      <h3>🕒 Horaires</h3>
+      <p>La réception commencera à partir de <strong>17h</strong>.</p>
+      <p>Merci d'arriver quelques minutes avant.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <h2>Votre présence rendra ce jour encore plus inoubliable !</h2>
+    <div class="gallery-grid">
+      <!-- ⚠️ Remplacez les chemins locaux par des chemins relatifs -->
+      <!-- Exemple : mettez vos images dans le même dossier que index.html -->
+      <img src="sal1.jpeg" alt="Salle">
+      <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop" alt="Salle">
+      <img src="haha.jpeg" alt="Salle">
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp-section">
+    <h2>Confirmation de présence</h2>
+    <p>Merci de confirmer votre présence avant le 1 Octobre 2026 ✨</p>
+
+    <form class="rsvp-form"
+      action="https://formspree.io/f/mbdbkqgy"
+      method="POST">
+      <input type="text" name="nom" placeholder="Votre nom" required>
+      <select name="presence" required>
+        <option value="">Serez-vous présent(e) ?</option>
+        <option>Oui avec plaisir 💍</option>
+        <option>Malheureusement non</option>
+      </select>
+      <textarea name="message" placeholder="Petit message pour les mariés ✨"></textarea>
+      <button type="submit">Confirmer</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <h2>Chaymae & Oussama</h2>
+    <p>17 Octobre 2026 • Prestige Palace • Bouskoura</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
