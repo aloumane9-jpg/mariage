@@ -6,6 +6,10 @@
   box-sizing:border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family:'Montserrat',sans-serif;
   background:#f8f7f2;
@@ -498,6 +502,23 @@ footer h2{
   /* RSVP popup */
   .popup-content{ padding:35px 25px; }
   .popup-content h3{ font-size:32px; }
+
+  /* Opening screen background mobile fix */
+  .opening-screen {
+    background-image: 
+      linear-gradient(to bottom, 
+        #efe6d7 0%, 
+        #efe6d7 calc(50% - 37.5vw), 
+        transparent calc(50% - 25vw), 
+        transparent calc(50% + 25vw), 
+        #efe6d7 calc(50% + 37.5vw), 
+        #efe6d7 100%),
+      url('background.jpg');
+    background-size: 100% 100%, contain;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center, center center;
+    background-color: #efe6d7;
+  }
 }
 
 @media (max-width: 480px){
